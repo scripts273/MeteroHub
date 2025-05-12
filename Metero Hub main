@@ -1,0 +1,238 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Main = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local CreditsFrame = Instance.new("Frame")
+local Sign = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local MainScrollingFrame = Instance.new("ScrollingFrame")
+local PrisonLifeMain = Instance.new("TextLabel")
+local ExecuteButton = Instance.new("TextButton")
+local ScriptKill = Instance.new("TextLabel")
+local ExecuteButton1 = Instance.new("TextButton")
+local ScriptGod = Instance.new("TextLabel")
+local GiveTools = Instance.new("TextLabel")
+local ExecuteButton2 = Instance.new("TextButton")
+local JustABaseplateMain = Instance.new("TextLabel")
+local ExecuteButton3 = Instance.new("TextButton")
+local NetlessScript = Instance.new("TextLabel")
+
+--Properties:
+
+
+	Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Main
+MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.316436261, 0, 0.340232849, 0)
+MainFrame.Size = UDim2.new(0, 478, 0, 247)
+MainFrame.Active = true
+MainFrame.Draggable = true
+ 
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = MainFrame
+CreditsFrame.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+CreditsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CreditsFrame.BorderSizePixel = 0
+CreditsFrame.Position = UDim2.new(-0.00155537494, 0, -0.00169168692, 0)
+CreditsFrame.Size = UDim2.new(0, 132, 0, 247)
+
+Sign.Name = "Sign"
+Sign.Parent = CreditsFrame
+Sign.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sign.BackgroundTransparency = 1.000
+Sign.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sign.BorderSizePixel = 0
+Sign.Size = UDim2.new(0, 132, 0, 50)
+Sign.Font = Enum.Font.SourceSans
+Sign.Text = "Metero Hub"
+Sign.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sign.TextSize = 28.000
+
+Credits.Name = "Credits"
+Credits.Parent = CreditsFrame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.0303030312, 0, 0.174089074, 0)
+Credits.Size = UDim2.new(0, 124, 0, 193)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "This script created By iii_ddavid This main the game is Prison Life or Just a Baseplate, This script is the client or server Good Luck!"
+Credits.TextColor3 = Color3.fromRGB(121, 121, 121)
+Credits.TextSize = 20.000
+Credits.TextWrapped = true
+
+MainScrollingFrame.Name = "MainScrollingFrame"
+MainScrollingFrame.Parent = MainFrame
+MainScrollingFrame.Active = true
+MainScrollingFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+MainScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainScrollingFrame.BorderSizePixel = 0
+MainScrollingFrame.Position = UDim2.new(0.27459538, 0, 0.0850202441, 0)
+MainScrollingFrame.Size = UDim2.new(0, 346, 0, 225)
+MainScrollingFrame.CanvasPosition = Vector2.new(0, 140)
+MainScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
+
+PrisonLifeMain.Name = "PrisonLifeMain"
+PrisonLifeMain.Parent = MainScrollingFrame
+PrisonLifeMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PrisonLifeMain.BackgroundTransparency = 1.000
+PrisonLifeMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PrisonLifeMain.BorderSizePixel = 0
+PrisonLifeMain.Position = UDim2.new(0.0202312134, 0, 0, 0)
+PrisonLifeMain.Size = UDim2.new(0, 163, 0, 35)
+PrisonLifeMain.Font = Enum.Font.SourceSans
+PrisonLifeMain.Text = "Prison Life"
+PrisonLifeMain.TextColor3 = Color3.fromRGB(255, 255, 255)
+PrisonLifeMain.TextSize = 43.000
+
+if game.PlaceId == 155615604 then
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = MainScrollingFrame
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(0, 115, 255)
+ExecuteButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton.BorderSizePixel = 0
+ExecuteButton.Position = UDim2.new(0.563583791, 0, 0.0933333337, 0)
+ExecuteButton.Size = UDim2.new(0, 130, 0, 35)
+ExecuteButton.Font = Enum.Font.SourceSans
+ExecuteButton.Text = "Execute"
+ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.TextSize = 32.000
+ExecuteButton.MouseButton1Click:Connect(function()
+	local Health = ExecuteButton.Parent:FindFirstChild("Humanoid")
+	if Health == nil then
+		Health.Health = Health.Health-100
+	end
+end)
+
+ScriptKill.Name = "ScriptKill"
+ScriptKill.Parent = MainScrollingFrame
+ScriptKill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptKill.BackgroundTransparency = 1.000
+ScriptKill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptKill.BorderSizePixel = 0
+ScriptKill.Position = UDim2.new(0.0375722535, 0, 0.0928447843, 0)
+ScriptKill.Size = UDim2.new(0, 128, 0, 35)
+ScriptKill.Font = Enum.Font.SourceSans
+ScriptKill.Text = "Kill All"
+ScriptKill.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptKill.TextSize = 31.000
+ScriptKill.TextXAlignment = Enum.TextXAlignment.Left
+
+
+ExecuteButton1.Name = "ExecuteButton1"
+ExecuteButton1.Parent = MainScrollingFrame
+ExecuteButton1.BackgroundColor3 = Color3.fromRGB(0, 115, 255)
+ExecuteButton1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton1.BorderSizePixel = 0
+ExecuteButton1.Position = UDim2.new(0.563583791, 0, 0.182933345, 0)
+ExecuteButton1.Size = UDim2.new(0, 130, 0, 35)
+ExecuteButton1.Font = Enum.Font.SourceSans
+ExecuteButton1.Text = "Execute"
+ExecuteButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ExecuteButton1.TextSize = 32.000
+	ExecuteButton1.MouseButton1Click:Connect(function()
+		local Health = ExecuteButton.Parent:FindFirstChild("Humanoid")
+		if Health == nil then
+			Health.Health = Health.Health+9999999999999
+		end
+	end)
+
+ScriptGod.Name = "ScriptGod"
+ScriptGod.Parent = MainScrollingFrame
+ScriptGod.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptGod.BackgroundTransparency = 1.000
+ScriptGod.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptGod.BorderSizePixel = 0
+ScriptGod.Position = UDim2.new(0.0375722535, 0, 0.18648003, 0)
+ScriptGod.Size = UDim2.new(0, 128, 0, 35)
+ScriptGod.Font = Enum.Font.SourceSans
+ScriptGod.Text = "God "
+ScriptGod.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptGod.TextSize = 31.000
+ScriptGod.TextXAlignment = Enum.TextXAlignment.Left
+
+GiveTools.Name = "GiveTools"
+GiveTools.Parent = MainScrollingFrame
+GiveTools.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GiveTools.BackgroundTransparency = 1.000
+GiveTools.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GiveTools.BorderSizePixel = 0
+GiveTools.Position = UDim2.new(0.0375722535, 0, 0.265768766, 0)
+GiveTools.Size = UDim2.new(0, 128, 0, 35)
+GiveTools.Font = Enum.Font.SourceSans
+GiveTools.Text = "Give Remington"
+GiveTools.TextColor3 = Color3.fromRGB(255, 255, 255)
+GiveTools.TextSize = 31.000
+GiveTools.TextXAlignment = Enum.TextXAlignment.Left
+
+ExecuteButton2.Name = "ExecuteButton2"
+ExecuteButton2.Parent = MainScrollingFrame
+ExecuteButton2.BackgroundColor3 = Color3.fromRGB(0, 115, 255)
+ExecuteButton2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton2.BorderSizePixel = 0
+ExecuteButton2.Position = UDim2.new(0.563583791, 0, 0.267377794, 0)
+ExecuteButton2.Size = UDim2.new(0, 130, 0, 35)
+ExecuteButton2.Font = Enum.Font.SourceSans
+ExecuteButton2.Text = "Execute"
+ExecuteButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ExecuteButton2.TextSize = 32.000
+	ExecuteButton2.MouseButton1Click:Connect(function()
+		game.Workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end)
+end
+JustABaseplateMain.Name = "JustABaseplateMain"
+JustABaseplateMain.Parent = MainScrollingFrame
+JustABaseplateMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JustABaseplateMain.BackgroundTransparency = 1.000
+JustABaseplateMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JustABaseplateMain.BorderSizePixel = 0
+JustABaseplateMain.Position = UDim2.new(0.0202312134, 0, 0.341290563, 0)
+JustABaseplateMain.Size = UDim2.new(0, 163, 0, 35)
+JustABaseplateMain.Font = Enum.Font.SourceSans
+JustABaseplateMain.Text = "Just a BasePlate"
+JustABaseplateMain.TextColor3 = Color3.fromRGB(255, 255, 255)
+JustABaseplateMain.TextSize = 28.000
+
+
+	if game.PlaceId == 17574618959 then
+ExecuteButton3.Name = "ExecuteButton3"
+ExecuteButton3.Parent = MainScrollingFrame
+ExecuteButton3.BackgroundColor3 = Color3.fromRGB(0, 115, 255)
+ExecuteButton3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton3.BorderSizePixel = 0
+ExecuteButton3.Position = UDim2.new(0.563583791, 0, 0.448267817, 0)
+ExecuteButton3.Size = UDim2.new(0, 130, 0, 35)
+ExecuteButton3.Font = Enum.Font.SourceSans
+ExecuteButton3.Text = "Execute"
+ExecuteButton3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton3.TextSize = 32.000
+		ExecuteButton3.MouseButton1Click:Connect(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/HDAdminModule/Skibidi-VR/refs/heads/main/Skibidi.luau"))()
+		end)
+
+NetlessScript.Name = "NetlessScript"
+NetlessScript.Parent = MainScrollingFrame
+NetlessScript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NetlessScript.BackgroundTransparency = 1.000
+NetlessScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NetlessScript.BorderSizePixel = 0
+NetlessScript.Position = UDim2.new(0.0375722535, 0, 0.442968875, 0)
+NetlessScript.Size = UDim2.new(0, 128, 0, 35)
+NetlessScript.Font = Enum.Font.SourceSans
+NetlessScript.Text = "Netless Hub"
+NetlessScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+NetlessScript.TextSize = 31.000
+NetlessScript.TextXAlignment = Enum.TextXAlignment.Left
+	end
+
+ 
