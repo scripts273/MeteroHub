@@ -1,0 +1,29 @@
+--[[
+	| MeteoHub | Version: v0.1 |
+	| Credits  | By: iii_ddavid|
+	| Player   | Others Player |
+	| Servers  | Client Server |
+	| DebugFix | 	  True	   |
+]]
+
+local Gui = Instance.new("ScreenGui")
+local Image = Instance.new("ImageLabel")
+local Text = Instance.new("TextLabel")
+
+Gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local function CreateConfig()
+	local Tween = game:GetService("TweenService")
+	Image.Parent = Gui
+	Image.Position = UDim2.new(0.381, 0, 0.451, 0)
+	Image.Transparency = 1
+	
+	Text.Parent = Gui
+	Text.Transparency = 1
+	Text.Position = UDim2.new(0.465, 0, 0.467, 0)
+	Tween:Create(Image.Image == "rbxassetid://12348119032",
+		Image.Transparency == 0, Text.Transparency == 0
+	):Play()
+end
+
+CreateConfig()
