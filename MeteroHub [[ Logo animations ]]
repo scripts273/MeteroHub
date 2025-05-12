@@ -1,29 +1,46 @@
---[[
-	| MeteoHub | Version: v0.1 |
-	| Credits  | By: iii_ddavid|
-	| Player   | Others Player |
-	| Servers  | Client Server |
-	| DebugFix | 	  True	   |
-]]
+-- Gui to Lua
+-- Version: 3.2
 
-local Gui = Instance.new("ScreenGui")
-local Image = Instance.new("ImageLabel")
-local Text = Instance.new("TextLabel")
+-- Instances:
 
-Gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local ScreenGui = Instance.new("ScreenGui")
+local MeteroHub_Logo = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Sign = Instance.new("TextLabel")
 
-local function CreateConfig()
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MeteroHub_Logo.Name = "MeteroHub_Logo"
+MeteroHub_Logo.Parent = ScreenGui
+MeteroHub_Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MeteroHub_Logo.BackgroundTransparency = 1.000
+MeteroHub_Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MeteroHub_Logo.BorderSizePixel = 0
+MeteroHub_Logo.Position = UDim2.new(0.36328724, 0, 0.43467012, 0)
+MeteroHub_Logo.Size = UDim2.new(0, 100, 0, 100)
+MeteroHub_Logo.Image = "rbxassetid://12348119032"
+MeteroHub_Logo.ImageColor3 = Color3.fromRGB(0, 110, 255)
+
+UIAspectRatioConstraint.Parent = MeteroHub_Logo
+
+Sign.Name = "Sign"
+Sign.Parent = ScreenGui
+Sign.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sign.BackgroundTransparency = 1.000
+Sign.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sign.BorderSizePixel = 0
+Sign.Position = UDim2.new(0.440092176, 0, 0.467011631, 0)
+Sign.Size = UDim2.new(0, 255, 0, 50)
+Sign.Font = Enum.Font.SourceSans
+Sign.Text = "Metero Hub"
+Sign.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sign.TextSize = 47.000
+
+local function Animate()
 	local Tween = game:GetService("TweenService")
-	Image.Parent = Gui
-	Image.Position = UDim2.new(0.381, 0, 0.451, 0)
-	Image.Transparency = 1
-	
-	Text.Parent = Gui
-	Text.Transparency = 1
-	Text.Position = UDim2.new(0.465, 0, 0.467, 0)
-	Tween:Create(Image.Image == "rbxassetid://12348119032",
-		Image.Transparency == 0, Text.Transparency == 0
-	):Play()
+	Tween:Create(MeteroHub_Logo.ImageTransparency ==-.2, wait()):Play()
+	Tween:Create(Sign.TextTransparency ==-.2, wait()):Play()
 end
-
-CreateConfig()
